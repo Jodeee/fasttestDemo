@@ -1,0 +1,10 @@
+module: search
+description: 淘宝首页搜索
+steps:
+  - click 'tianmao.png'
+  - sleep 5
+  - click '新品试用'
+  - sleep 3
+  - goBack
+  - goBack
+  - click 我的淘宝

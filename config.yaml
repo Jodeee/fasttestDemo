@@ -1,0 +1,13 @@
+platformName: Android # 测试平台 Android or iOS
+testenv: test  # 测试环境
+restart: true # 是否重启app
+timeout: 10 #元素超时等待
+interval: 1 #元素查找轮询间隔
+# Android
+package: com.taobao.taobao
+activity: com.taobao.taobao/com.taobao.tao.TBMainActivity
+# iOS
+bundleId: com.taobao.taobao4iphone
+# case
+testcase:
+    - testcase/search.yaml
