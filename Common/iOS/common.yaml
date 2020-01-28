@@ -1,6 +1,8 @@
 Taobao_Search:
- description: iOS_淘宝搜索商品
+ description: iOS端淘宝搜索商品
  input: [mobile_phone]
  output: []
  steps:
-    - click '我的淘宝'
+    - ${search_text} = getText 'xpath'
+    - click ${search_text}
+    - input ${search_text} ${mobile_phone}

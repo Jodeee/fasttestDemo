@@ -2,12 +2,9 @@ testenv: test  # 测试环境
 # 初始化参数
 desiredcaps:
     - platformName : iOS # 平台
-      deviceName: iPhone x # 设备名称
       udid: 5084DAF0-56C5-4279-B726-0C1B87E12165 # 设备id
-      restart: false
-      timeout: 10 # 元素查找超时时间
-      interval: 1 # 元素查找轮询间隔
       # Android
+      restart: false
       package: com.taobao.taobao
       activity: com.taobao.taobao/com.taobao.tao.TBMainActivity
       # iOS
