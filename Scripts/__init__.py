@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from Scripts.Test import test
+from Scripts.keyword import *
 
-__all__ = ['test']
+__all__ = ['getText']

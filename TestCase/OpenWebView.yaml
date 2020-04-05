@@ -1,11 +1,14 @@
 module: OpenWebView
 skip: false
-description: 打开饿了么
+description: 打开淘宝
 steps:
-  - input '搜索或输入网站名称' 'tb.ele.me/m?from=taobaoapp'
-  - click '定位失败'
-  - input '请输入地址' '西湖'
-  - click '西湖文化广场'
-  - click '美食'
+    - click '搜索'
+    - ${text} = Scripts.getText('com.taobao.taobao:id/searchEdit')
 
-  
+
+
+
+
+
+
+
