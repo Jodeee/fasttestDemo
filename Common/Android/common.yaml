@@ -3,6 +3,4 @@ Taobao_Search:
  input: [mobile_phone]
  output: []
  steps:
-    - ${search_text} = getText 'com.taobao.taobao:id/home_searchedit'
-    - click ${search_text}
-    - input ${search_text} ${mobile_phone}
+    - ${search_text} = $.getText('com.taobao.taobao:id/home_searchedit')

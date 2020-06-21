@@ -3,4 +3,4 @@ Taobao_Search:
  input: [mobile_phone]
  output: []
  steps:
-    - click '我的淘宝'
+    - click('我的淘宝')

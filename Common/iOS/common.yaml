@@ -3,6 +3,4 @@ Taobao_Search:
  input: [mobile_phone]
  output: []
  steps:
-    - ${search_text} = getText 'xpath'
-    - click ${search_text}
-    - input ${search_text} ${mobile_phone}
+    - ${search_text} = $.getText('iOS Xpath')
