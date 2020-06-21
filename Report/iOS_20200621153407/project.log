@@ -1,0 +1,52 @@
+2020-06-21 15:34:07,871 INFO :init...
+2020-06-21 15:34:07,871 INFO :******************* analytical config *******************
+2020-06-21 15:34:07,871 INFO :testenv: test
+2020-06-21 15:34:07,871 INFO :driver: macaca
+2020-06-21 15:34:07,871 INFO :desiredcaps: [{'platformName': 'iOS', 'udid': '7865cebc58f19e8f993bff9f2928b28557f37ff4', 'restart': True, 'clear': True, 'package': 'com.taobao.taobao', 'activity': 'com.taobao.tao.TBMainActivity', 'automationName': 'Appium', 'noReset': True, 'bundleId': 'com.apple.mobilesafari', 'reuse': 3}]
+2020-06-21 15:34:07,872 INFO :testcase: ['testcase/OpenTaobao.yaml', 'testcase/OpenGithub.yaml']
+2020-06-21 15:34:07,872 INFO :******************* analytical testcase *******************
+2020-06-21 15:34:07,872 INFO :testcase:['/Users/xiongjunjie/code/fasttestDemo/testcase/OpenTaobao.yaml', '/Users/xiongjunjie/code/fasttestDemo/testcase/OpenGithub.yaml']
+2020-06-21 15:34:07,872 INFO :******************* analytical common *******************
+2020-06-21 15:34:07,877 INFO :common: KeysView({'Taobao_Search': {'description': 'iOS端淘宝搜索商品', 'input': ['mobile_phone'], 'output': [], 'steps': ["${search_text} = getText 'xpath'", 'click ${search_text}', 'input ${search_text} ${mobile_phone}']}})
+2020-06-21 15:34:07,878 INFO :******************* analytical data *******************
+2020-06-21 15:34:07,878 INFO :variable: {'userid': 'admin', 'password': 'admin123456'}
+2020-06-21 15:34:07,878 INFO :images: ['tianmao.png']
+2020-06-21 15:34:07,878 INFO :keywords: ['openUrl']
+2020-06-21 15:34:07,878 INFO :******************* analytical images *******************
+2020-06-21 15:34:07,879 INFO :image path: {'tianmao.png': '/Users/xiongjunjie/code/fasttestDemo/images/tianmao.png'}
+2020-06-21 15:34:07,882 INFO :******************* analytical desired capabilities *******************
+2020-06-21 15:34:07,882 INFO :    platformName: iOS
+2020-06-21 15:34:07,882 INFO :    udid: 7865cebc58f19e8f993bff9f2928b28557f37ff4
+2020-06-21 15:34:07,882 INFO :    restart: True
+2020-06-21 15:34:07,882 INFO :    clear: True
+2020-06-21 15:34:07,882 INFO :    package: com.taobao.taobao
+2020-06-21 15:34:07,883 INFO :    activity: com.taobao.tao.TBMainActivity
+2020-06-21 15:34:07,883 INFO :    automationName: Appium
+2020-06-21 15:34:07,883 INFO :    noReset: True
+2020-06-21 15:34:07,883 INFO :    bundleId: com.apple.mobilesafari
+2020-06-21 15:34:07,883 INFO :    reuse: 3
+2020-06-21 15:34:07,927 INFO :get port return 4147
+2020-06-21 15:34:07,927 INFO :Start the server
+2020-06-21 15:34:08,891 INFO :>> Macaca server started
+2020-06-21 15:34:08,892 INFO :Connect to server
+2020-06-21 15:34:33,536 INFO :******************* TestCase 打开淘宝 Start *******************
+2020-06-21 15:34:33,536 INFO :openUrl('https://www.taobao.com/')
+2020-06-21 15:34:50,748 INFO :******************* Total: 1, Pass: 1, Failed: 0, Error: 0, Skipped: 0 ********************
+
+2020-06-21 15:34:50,749 INFO :******************* TestCase 打开Github Start *******************
+2020-06-21 15:34:50,749 INFO :click('标签页')
+2020-06-21 15:34:50,750 INFO :find elements: Body: {'using': 'name', 'value': '标签页', 'index': 0}
+2020-06-21 15:34:54,135 INFO :return elements: [<WebElement (session="7966d29b-840f-4e42-b039-7ef37cc98298", element="794FD17B-46D3-4BBA-A9AE-AF9296BF6AD1")>]
+2020-06-21 15:34:57,410 INFO :click('新建标签页')
+2020-06-21 15:34:57,411 INFO :find elements: Body: {'using': 'name', 'value': '新建标签页', 'index': 0}
+2020-06-21 15:34:57,731 INFO :return elements: [<WebElement (session="7966d29b-840f-4e42-b039-7ef37cc98298", element="90248983-DA12-49BF-8767-0AFAC629DF4D")>]
+2020-06-21 15:34:58,608 INFO :input('URL', 'https://github.com/Jodeee')
+2020-06-21 15:34:58,609 INFO :find elements: Body: {'using': 'name', 'value': 'URL', 'index': 0}
+2020-06-21 15:35:00,253 INFO :return elements: [<WebElement (session="7966d29b-840f-4e42-b039-7ef37cc98298", element="A3B49353-F01D-46F0-93E1-42C7C83B539E")>, <WebElement (session="7966d29b-840f-4e42-b039-7ef37cc98298", element="41DA1B6D-3281-49D1-8717-4D586A2CA451")>]
+2020-06-21 15:35:02,380 INFO :sleep(3)
+2020-06-21 15:35:05,456 INFO :click('fasttest')
+2020-06-21 15:35:05,456 INFO :find elements: Body: {'using': 'name', 'value': 'fasttest', 'index': 0}
+2020-06-21 15:35:14,651 INFO :return elements: [<WebElement (session="7966d29b-840f-4e42-b039-7ef37cc98298", element="A78DE537-1CBC-4964-A239-B0A1A6AB02A3")>, <WebElement (session="7966d29b-840f-4e42-b039-7ef37cc98298", element="0827820C-D409-485A-814A-B4606B69FB85")>, <WebElement (session="7966d29b-840f-4e42-b039-7ef37cc98298", element="2680081E-55ED-47C0-BC31-FADDAA4B53A1")>]
+2020-06-21 15:35:16,491 INFO :sleep(5)
+2020-06-21 15:35:21,603 INFO :******************* Total: 2, Pass: 2, Failed: 0, Error: 0, Skipped: 0 ********************
+

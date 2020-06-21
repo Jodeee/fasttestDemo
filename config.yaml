@@ -1,8 +1,8 @@
 testenv: test
 driver: macaca
 desiredcaps:
-    - platformName : Android
-      udid: 'MQS7N19403034696'
+    - platformName : 'iOS'
+      udid: '7865cebc58f19e8f993bff9f2928b28557f37ff4'
       # Android
       restart: true
       clear: true
@@ -15,4 +15,5 @@ desiredcaps:
       reuse: 3
 
 testcase:
-    - testcase/OpenWebView.yaml
+    - testcase/OpenTaobao.yaml
+    - testcase/OpenGithub.yaml

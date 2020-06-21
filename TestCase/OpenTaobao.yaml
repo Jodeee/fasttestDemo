@@ -1,0 +1,13 @@
+module: OpenUrl
+skip: false
+description: 打开淘宝
+steps:
+    - openUrl('https://www.taobao.com/')
+
+
+
+
+
+
+
+
