@@ -1,0 +1,20 @@
+module: web
+skip: false
+description: cookies相关
+steps:
+  - openUrl('https://www.baidu.com')
+  # 获取所有cookies
+  - ${cookies} = $.getCookies()
+  # 获取指定cookie
+  - ${cookie} = $.getCookie('BAIDUID')
+  # 删除指定cookie
+  - deleteCookie('BAIDUID')
+  # 删除所有cookie
+  - deleteAllCookies()
+  - sleep(3)
+  # 添加指定cookie
+  - ${add_cookie} = {'name':'ADDCOOKIE','value':'123adc'}
+  - addCookie(${add_cookie})
+  - ${cookies} = $.getCookies()
+
+

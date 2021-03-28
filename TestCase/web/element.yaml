@@ -1,0 +1,49 @@
+module: web
+skip: false
+description: 元素相关操作
+steps:
+  - openUrl('https://www.baidu.com')
+  # 获取单个元素 id|name|class|tag_name|link_text|partial_link_text|xpath|css_selector
+  - ${element_id} = $.getElement('id=su')
+  - ${element_name} = $.getElement('name=f')
+  - ${element_class} = $.getElement('class=s_ipt')
+  - ${element_tag_name} = $.getElement('tag_name=form')
+  - ${element_link_text} = $.getElement('link_text=新闻')
+  - ${element_partial_link_text} = $.getElement('partial_link_text=新')
+  - ${element_xpath} = $.getElement('xpath=//*[@id="su"]')
+  - ${element_css_selector} = $.getElement('css_selector=[name="wd"]')
+
+   # 获取一组元素
+  - ${elements_class} = $.getElements('class=title-content-title')
+
+  # 判断元素是否选中
+  - ${is_selected} = $.isSelected(${element_id})
+  # 判断元素是否显示
+  - ${is_displayed} = $.isDisplayed(${element_id})
+  # 判断元素是否可使用
+  - ${is_enabled} = $.isEnabled(${element_id})
+  # 判断元素是否存在
+  - ${is_exist} = $.isExist('id=su')
+  - if ${is_exist}:
+      - sleep(1)
+  # 判断元素是不否存在
+  - ${is_not_exist} = $.isNotExist('id=su')
+  - if ${is_not_exist}:
+      - sleep(1)
+  # 获取元素大小
+  - ${size} = $.getSize(${element_id})
+  # 获取元素坐标
+  - ${location} = $.getLocation(${element_id})
+  # 获取元素位置大小
+  - ${rect} = $.getRect(${element_id})
+
+  # 获取元素tag
+  - ${tag_name} = $.getTagName(${element_id})
+  # 获取元素文案
+  - ${text} = $.getText(${element_id})
+  # 获取元素属性
+  - ${attribute} = $.getAttribute(${element_id}, 'value')
+  # 获取元素css
+  - ${css} = $.getCssProperty(${element_id}, 'height')
+
+

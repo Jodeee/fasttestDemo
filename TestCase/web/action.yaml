@@ -1,0 +1,40 @@
+module: web
+skip: false
+description: action相关
+steps:
+  - openUrl('https://www.baidu.com')
+  # 检查元素
+  - check('id=su')
+  # 单击元素
+  - click('id=su')
+  # 右击元素
+  - contextClick('id=su')
+  # 双击元素
+  - doubleClick('class=hot-refresh-text')
+  # 按住鼠标左键
+  - holdClick('class=hot-refresh-text')
+
+  # 鼠标拖放
+  - click('xpath=//*[@id="s-top-left"]/a[1]')
+  - ${all_handle} = $.getWindowHandles()
+  - switchToWindow(${all_handle}[-1])
+  - dragDrop('xpath=//*[@id="sbox"]/tbody/tr/td[1]/div[1]/a/img','id=s_btn_wr')
+  # 拖动元素到某个位置
+#  - dragDropByOffset('xpath=//*[@id="sbox"]/tbody/tr/td[1]/div[1]/a/img',10,10)
+  - switchToWindow(${all_handle}[0])
+  # 鼠标从当前位置移动到某个坐标
+  - moveByOffset(10,10)
+  # 鼠标移动到某个元素上
+  - moveToElement('xpath=//*[@id="hotsearch-content-wrapper"]/li[1]/a/span[2]')
+  # 移动到距某个元素(左上角坐标)多少距离的位置
+  - moveToElementWithOffset('xpath=//*[@id="hotsearch-content-wrapper"]/li[1]/a/span[2]',10,20)
+  # 输入
+  - sendKeys('name=wd','te')
+  - sendKeys('name=wd','Keys.COMMAND', 'v')
+  # 清除
+  - clear('name=wd')
+  # 截图
+  - ${screenshot} = $.saveScreenshot('id=su', 'test.png')
+  # 执行JS
+  - ${js} = "window.open('http://www.taobao.com')"
+  - executeScript(${js})

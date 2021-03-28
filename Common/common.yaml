@@ -1,6 +1,13 @@
-Taobao_Search:
- description: 淘宝搜索商品
- input: [mobile_phone]
+CommonTest:
+ description: 公共方法
+ input: []
  output: []
  steps:
-    - click('我的淘宝')
+   - sleep(3)
+
+CommonTest1:
+ description: 公共方法
+ input: []
+ output: []
+ steps:
+   - sleep(1)

@@ -1,0 +1,8 @@
+variable:
+  - userid: 'admin'
+    password: '123456'
+resource:
+  - image: 'Resource/baidu.png'
+keywords:
+  - 'test_scripts'
+  - 'test_randint'

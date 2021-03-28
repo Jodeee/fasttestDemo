@@ -1,6 +1,0 @@
-1|:|True|:|6.7s|:|Step_1.png|:|- click('标签页')
-2|:|True|:|1.2s|:|Step_2.png|:|- click('新建标签页')
-3|:|True|:|3.8s|:|Step_3.png|:|- input('URL', 'https://github.com/Jodeee')
-4|:|True|:|3.1s|:|Step_4.png|:|- sleep(3)
-5|:|True|:|11.0s|:|Step_5.png|:|- click('fasttest')
-6|:|True|:|5.1s|:|Step_6.png|:|- sleep(5)

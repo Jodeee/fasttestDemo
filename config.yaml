@@ -1,19 +1,52 @@
-testenv: test
-driver: macaca
-desiredcaps:
-    - platformName : 'iOS'
-      udid: '7865cebc58f19e8f993bff9f2928b28557f37ff4'
-      # Android
-      restart: true
-      clear: true
-      package: com.taobao.taobao
-      activity: com.taobao.tao.TBMainActivity
-      automationName: Appium
-      noReset: True
-      # iOS
-      bundleId: com.apple.mobilesafari
-      reuse: 3
+#driver: 'appium'
+#reStart: true
+#timeOut: 5
+#saveScreenshot: true
+#desiredCapabilities:
+#    - platformName : 'Android'
+#      udid: 'devices_id'
+#      package: 'com.eg.android.AlipayGphone'
+#      activity: 'com.eg.android.AlipayGphone.AlipayLogin'
+#      automationName: 'Appium'
+#      noReset: true
+#      bundleId: 'com.apple.mobilesafari'
+#
+#testcase:
+#    - 'TestCase/common'
+
+#driver: 'macaca'
+#reStart: true
+#timeOut: 5
+#saveScreenshot: false
+#desiredCapabilities:
+#    - platformName : 'Android'
+#      udid: 'deviecs_id'
+#      package: 'com.eg.android.AlipayGphone'
+#      activity: 'com.eg.android.AlipayGphone.AlipayLogin'
+#      bundleId: 'com.apple.mobilesafari'
+#      reuse: 3
+#testcase:
+#    - 'TestCase/'
+
+driver: 'selenium'
+reStart: true
+saveScreenshot: false
+timeOut: 5
+desiredCapabilities:
+    - browser: 'chrome'
+      maxWindow: True
+      chrome:
+        - driver: 'Resource/chromedriver'
+          options:
+            - '--headless'
+            - '--dissble-gpu'
+            - '--window-size=1920,1050'
+      firefox:
+        - driver: '/Users/admin/Desktop/geckodriver'
+          options:
+            - '--headless'
+            - '--dissble-gpu'
+            - '--window-size=1920,1050'
 
 testcase:
-    - testcase/OpenTaobao.yaml
-    - testcase/OpenGithub.yaml
+    - 'TestCase/web'

@@ -1,0 +1,53 @@
+module: web
+skip: false
+description: 浏览器相关操作
+steps:
+  # 打开URL
+  - openUrl('https://www.baidu.com')
+  # 获取浏览器名字
+  - ${getName} = $.getName()
+  # 窗口最大化
+  - maxWindow()
+  # 窗口最小化
+  - minWindow()
+  # 全屏窗口
+  - fullscreenWindow()
+  # 设置窗口大小
+  - setWindowSize(2000,1500)
+  # 设置窗口位置
+  - setWindowPosition(10,30)
+  # 获取窗口大小
+  - ${w_size} = $.getWindowSize()
+  # 获取窗口位置
+  - ${w_position} = $.getWindowPosition()
+
+  - click('xpath=//*[@id="s-top-left"]/a[1]')
+  # 获取当前窗口句柄
+  - ${handle} = $.getCurrentWindowHandle()
+  # 获取所有窗口句柄
+  - ${all_handle} = $.getWindowHandles()
+  - for ${handle} in ${all_handle}:
+      # 切换窗口句柄
+      - switchToWindow(${handle})
+      - ${title} = $.getTitle()
+      - if ${title} == '百度新闻——海量中文资讯平台':
+          - break
+
+  # 获取当前窗口标题
+  - ${title} = $.getTitle()
+  # 获取当前窗口url
+  - ${current_url} = $.getCurrentUrl()
+
+  - click('xpath=//*[@id="channel-all"]/div/ul/li[2]')
+  - click('xpath=//*[@id="channel-all"]/div/ul/li[3]')
+  # 后退
+  - back()
+  # 前进
+  - forward()
+  # 刷新
+  - refresh()
+
+
+
+
+

@@ -1,0 +1,22 @@
+module: mobile
+skip: false
+description: 登录用例
+steps:
+#  # 输入手机号
+#  - input('手机号/邮箱/淘宝会员名', ${userid})
+#  # 输入密码
+#  - input('请输入登录密码', ${password})
+#  # 点击登录
+#  - click('登录')
+
+  # 根据config中platformName调用对应目录下关键字，等价于上方步骤
+  - call login(${userid}, ${password})
+
+  # Common/Android、Common/iOS、Common/common.yaml下都存在的关键字
+  # 优先取config中platformName对应目录下的关键字
+  - call CommonTest()
+
+  # 调用脚本
+  - ${element} = test_scripts('首页')
+  - ${num} = test_randint()
+  - test_randint()

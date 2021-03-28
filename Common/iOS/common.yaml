@@ -1,6 +1,0 @@
-Taobao_Search:
- description: iOS端淘宝搜索商品
- input: [mobile_phone]
- output: []
- steps:
-    - ${search_text} = $.getText('iOS Xpath')

@@ -1,0 +1,32 @@
+module: common
+skip: false
+description: 公共关键字
+steps:
+  # 设置全局变量
+  - setVar('test', True)
+  # 获取全局变量
+  - ${test3} = $.getVar('test')
+  # 科学运算
+  - ${test1} = $.id(1+2*3)
+  - ${test2} = $.id('test'+' '+'common')
+  # 断言
+  - assert 5 > 7
+  # 休眠
+  - sleep(5)
+  # 获取数组长度
+  - ${lis} = [1, 2, 3, 4]
+  - ${len} = $.getLen(${lis})
+  # if elif else
+  - if ${len} == 3:
+      - sleep(1)
+    elif ${len} == 4:
+      - sleep(2)
+    else:
+      - sleep(3)
+  # while 循环
+  - while ${len}:
+      - ${len} = $.id(${len}-1)
+  # for 循环
+  - ${len} = [1, 2, 3, 4]
+  - for ${i} in ${len}:
+      - assert ${i} <= 3

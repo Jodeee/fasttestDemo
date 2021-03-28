@@ -1,0 +1,18 @@
+login:
+ description: iOS端登录
+ input: [userid, password]
+ output: []
+ steps:
+   # 输入手机号
+   - input('手机号/邮箱/淘宝会员名', ${userid})
+   # 输入密码
+   - input('请输入登录密码', ${password})
+   # 点击登录
+   - click('登录')
+
+CommonTest:
+ description: iOS端方法
+ input: []
+ output: []
+ steps:
+   - sleep(2)

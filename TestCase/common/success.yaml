@@ -1,0 +1,5 @@
+module: common
+skip: false
+description: 成功场景
+steps:
+  - ${test} = $.id(1+2*3)

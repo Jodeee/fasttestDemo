@@ -1,0 +1,5 @@
+module: common
+skip: true
+description: 跳过场景
+steps:
+  - ${test} = $.id(1+2*3)
